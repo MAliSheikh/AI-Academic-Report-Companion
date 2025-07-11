@@ -5,3 +5,6 @@ pydantic
 passlib[bcrypt]
 pyjwt
 pydantic[email]
+python-jose
+python-multipart
+dotenv
