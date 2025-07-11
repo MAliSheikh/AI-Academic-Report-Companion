@@ -1,4 +1,7 @@
 fastapi
 uvicorn
 sqlalchemy
-pydanti
+pydantic
+passlib[bcrypt]
+pyjwt
+pydantic[email]
