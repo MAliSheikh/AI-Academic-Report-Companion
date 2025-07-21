@@ -66,3 +66,4 @@ htmlcov/
 # Local env files
 .env
 .env.* 
+.vercel
