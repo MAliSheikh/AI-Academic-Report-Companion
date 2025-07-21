@@ -27,4 +27,4 @@ class AttendanceLogUpdate(BaseModel):
 class AttendanceLogResponse(AttendanceLogBase):
     attendance_id: int
     class Config:
-        orm_mode = True 
+        from_attributes = True

@@ -18,4 +18,4 @@ class ParentResponse(ParentBase):
     parent_id: int
     disabled: bool
     class Config:
-        orm_mode = True 
+        from_attributes = True 

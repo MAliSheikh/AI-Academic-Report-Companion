@@ -34,4 +34,4 @@ class ExamSessionUpdate(BaseModel):
 class ExamSessionResponse(ExamSessionBase):
     exam_id: int
     class Config:
-        orm_mode = True 
+        from_attributes = True
