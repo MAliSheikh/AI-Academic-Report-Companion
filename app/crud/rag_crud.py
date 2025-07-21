@@ -7,9 +7,18 @@ from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from pathlib import Path
 import os
-# Load environment variables
+import re
+
 load_dotenv()
 os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
+
+def clean_code_answer(answer: str) -> str:
+    # Remove Markdown code fences
+    answer = re.sub(r"```(?:\w+)?\n?", "", answer)
+    # Optionally, unescape newlines (if needed)
+    # answer = answer.replace("\\n", "\n")  # Only if double-escaped
+    return answer.strip()
+
 
 def initialize_rag_system():
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
