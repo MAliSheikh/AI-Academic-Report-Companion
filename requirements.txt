@@ -16,3 +16,4 @@ pdfplumber
 langchain-community
 langchain_groq
 sentence-transformers
+langchain-huggingface
