@@ -7,7 +7,7 @@ pyjwt
 pydantic[email]
 python-jose
 python-multipart
-dotenv
+python-dotenv
 langchain
 openai
 faiss-cpu
@@ -17,3 +17,5 @@ langchain-community
 langchain_groq
 sentence-transformers
 langchain-huggingface
+boto3
+botocore
