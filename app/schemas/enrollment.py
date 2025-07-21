@@ -3,9 +3,9 @@ from typing import Optional
 import enum
 
 class EnrollmentStatusEnum(str, enum.Enum):
-    enrolled = "Enrolled"
-    withdrawn = "Withdrawn"
-    completed = "Completed"
+    enrolled = "enrolled"
+    withdrawn = "withdrawn"
+    completed = "completed"
 
 class EnrollmentBase(BaseModel):
     student_id: int

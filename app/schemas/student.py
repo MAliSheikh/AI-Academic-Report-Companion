@@ -5,21 +5,21 @@ from decimal import Decimal
 import enum
 
 class GenderEnum(str, enum.Enum):
-    male = "Male"
-    female = "Female"
-    other = "Other"
+    male = "male"
+    female = "female"
+    other = "other"
 
 class MaritalStatusEnum(str, enum.Enum):
-    single = "Single"
-    married = "Married"
-    divorced = "Divorced"
-    widowed = "Widowed"
+    single = "single"
+    married = "married"
+    divorced = "divorced"
+    widowed = "widowed"
 
 class EnrollmentStatusEnum(str, enum.Enum):
-    active = "Active"
-    leave = "Leave"
-    graduated = "Graduated"
-    dropped = "Dropped"
+    active = "active"
+    leave = "leave"
+    graduated = "graduated"
+    dropped = "dropped"
 
 class StudentBase(BaseModel):
     university_roll_number: str

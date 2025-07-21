@@ -3,9 +3,9 @@ from typing import Optional, List
 import enum
 
 class CourseTypeEnum(str, enum.Enum):
-    core = "Core"
-    elective = "Elective"
-    lab = "Lab"
+    core = "core"
+    elective = "elective"
+    lab = "lab"
 
 class CourseBase(BaseModel):
     course_code: str

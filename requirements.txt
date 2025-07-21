@@ -8,3 +8,8 @@ pydantic[email]
 python-jose
 python-multipart
 dotenv
+langchain
+openai
+faiss-cpu
+pypdf
+pdfplumber

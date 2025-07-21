@@ -1,12 +1,14 @@
 from sqlalchemy import Column, Integer, String, Enum, Date, ForeignKey, Text
 from app.database import Base
 import enum
+from typing import Optional
+from datetime import date
 
 class AttendanceStatusEnum(enum.Enum):
-    present = "Present"
-    absent = "Absent"
-    late = "Late"
-    excused = "Excused"
+    present = "present"
+    absent = "absent"
+    late = "late"
+    excused = "excused"
 
 class AttendanceLog(Base):
     __tablename__ = "attendance_logs"

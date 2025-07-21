@@ -3,10 +3,10 @@ from app.database import Base
 import enum
 
 class ExamTypeEnum(enum.Enum):
-    midterm = "Midterm"
-    final = "Final"
-    quiz = "Quiz"
-    viva = "Viva"
+    midterm = "midterm"
+    final = "final"
+    quiz = "quiz"
+    viva = "viva"
 
 class ExamSession(Base):
     __tablename__ = "exam_sessions"

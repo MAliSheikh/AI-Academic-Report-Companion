@@ -1,16 +1,17 @@
 from pydantic import BaseModel
 from typing import Optional
 import enum
+from datetime import date
 
 class AttendanceStatusEnum(str, enum.Enum):
-    present = "Present"
-    absent = "Absent"
-    late = "Late"
-    excused = "Excused"
+    present = "present"
+    absent = "absent"
+    late = "late"
+    excused = "excused"
 
 class AttendanceLogBase(BaseModel):
     enrollment_id: int
-    date: str
+    date: date
     status: AttendanceStatusEnum
     remarks: Optional[str]
 
@@ -19,7 +20,7 @@ class AttendanceLogCreate(AttendanceLogBase):
 
 class AttendanceLogUpdate(BaseModel):
     enrollment_id: Optional[int]
-    date: Optional[str]
+    date: Optional[date]
     status: Optional[AttendanceStatusEnum]
     remarks: Optional[str]
 

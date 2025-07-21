@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional, List
 from decimal import Decimal
+from pydantic import field_validator
 
 class GradeBase(BaseModel):
     enrollment_id: int
@@ -19,6 +20,13 @@ class GradeBase(BaseModel):
 
 class GradeCreate(GradeBase):
     pass
+
+    @field_validator('quiz_marks', 'assignment_marks', mode='before')
+    @classmethod
+    def convert_decimals_to_float(cls, v):
+        if v is None:
+            return v
+        return [float(x) for x in v]
 
 class GradeUpdate(BaseModel):
     enrollment_id: Optional[int]
